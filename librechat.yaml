@@ -1,0 +1,13 @@
+version: 1.3.5
+cache: true
+
+endpoints:
+  custom:
+    - name: "BenimEndpoint"                  # Bu isim model seçicide çıkacak
+      apiKey: "${BENIM_API_KEY}"             # veya "user_provided" (UI'dan girmek için)
+      baseURL: "https://api.bluesminds.com/v1"   # ← BURASI EN ÖNEMLİ, KENDİ ENDPOINT'İN
+      models:
+        default: ["gpt-5.5", "deepseek-v4"]   # Modellerini buraya yaz
+        fetch: true   # Eğer endpoint'in /models destekliyorsa aç
+      titleConvo: true
+      modelDisplayLabel: "Benim Model"
